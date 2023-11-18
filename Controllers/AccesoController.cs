@@ -14,7 +14,7 @@ namespace ProyectoDAS.Controllers
 {
     public class AccesoController : Controller
     {
-        static string cadena = "Data Source=CARLOS\\SQLEXPRESS;Initial Catalog=DB_Acceso;Integrated Security=true";
+        static string cadena = "Data Source=CARLOS\\SQLEXPRESS;Initial Catalog=DB_Credenciales;Integrated Security=true";
 
 
         // GET: Acceso

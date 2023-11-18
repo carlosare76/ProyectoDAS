@@ -1,33 +1,260 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    Layout = null;
 }
 
-<main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css?ver=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" />
+    <link href="~/Content/css/Index.css" rel="stylesheet" />
+    <script src="~/Content/js/index.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+    <script src="https://www.jqueryscript.net/demo/Customizable-Animated-Dropdown-Plugin-with-jQuery-CSS3-Nice-Select/js/jquery.nice-select.js"></script>
+</head>
+<body>
+    <section class="banner">
+
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light custom_header navbar-toggler py-3">
+            <a class="navbar-brand" href="#">Bienvenido</a>
+            <button>@Html.ActionLink("Salir","CerrarSesion","Home")</button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav ml-auto my-lg-0 mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hotels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Advantures</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Travels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Foods</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Extra</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="owl-carousel owl-theme main_banner">
+            <div class="item"><img src="https://pbs.twimg.com/media/EGHYvttU4AAYKb7?format=jpg&name=large" alt="" /></div>
+            <div class="item"><img src="https://pbs.twimg.com/media/EGHYvtkUcAAuc8T?format=jpg&name=large" alt="" /></div>
+            <div class="item"><img src="https://pbs.twimg.com/media/EGHYvtjU0AAO8w1?format=jpg&name=large" alt="" /></div>
+        </div>
+
+        <div class="search-sec bg-transparent d-none d-sm-block" style="top:50%;">
+            <div class="container text-center tag_line">
+                <h3>¿Donde voy?</h3>
+                <p>Reserva experiencias unicas con nosotros</p>
+            </div>
+        </div>
+        <div class="search-sec">
+            <div class="container">
+                <form>
+                    <div class="row no-gutters custom-search-input-2">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <div class="custom-select-form">
+                                    <select class="w-100" name="city" id="city">
+                                        <option value="" selected>Elige tu pais o ciudad</option>
+                                        <option value="Europe">Europe</option>
+                                        <option value="United states">United states</option>
+                                        <option value="South America">South America</option>
+                                        <option value="Oceania">Oceania</option>
+                                        <option value="Asia">Asia</option>
+                                        <option value="Europe">Europe</option>
+                                        <option value="United states">United states</option>
+                                        <option value="South America">South America</option>
+                                        <option value="Oceania">Oceania</option>
+                                        <option value="Asia">Asia</option>
+                                        <option value="Europe">Europe</option>
+                                        <option value="United states">United states</option>
+                                        <option value="South America">South America</option>
+                                        <option value="Oceania">Oceania</option>
+                                        <option value="Asia">Asia</option>
+                                        <option value="Europe">Europe</option>
+                                        <option value="United states">United states</option>
+                                        <option value="South America">South America</option>
+                                        <option value="Oceania">Oceania</option>
+                                        <option value="Asia">Asia</option>
+                                    </select>
+                                </div>
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <input class="form-control search-slt" type="text" name="dates" placeholder="Selecciona una fecha...">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="panel-dropdown">
+                                <a href="#">Personas <span class="qtyTotal">1</span></a>
+                                <div class="panel-dropdown-content">
+                                    <div class="qtyButtons">
+                                        <label>Adults</label>
+                                        <input type="text" name="qtyInput" value="1">
+                                    </div>
+                                    <div class="qtyButtons">
+                                        <label>Childrens</label>
+                                        <input type="text" name="qtyInput" value="0">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <button type="submit" class="btn_search btn btn-danger wrn-btn ripple"><span>Buscar </span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </section>
 
-    <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </section>
-    </div>
-</main>
+    <section class="container-fluid container-custom margin_80_0 py-4">
+        <div class="main_title_2 py-4 text-center">
+            <span><em></em></span>
+            <h2>Nuestros destinos populares</h2>
+            <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+        </div>
+        <div id="places" class="owl-carousel owl-theme places pt-4 position-relative">
+            <div class="item">
+                <div class="box_grid">
+                    <figure>
+                        <a href="#!" class="wish_bt"></a>
+                        <a href="#!"><img src="http://www.ansonika.com/panagea/img/tour_3.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
+                        <small>Historic</small>
+                    </figure>
+                    <div class="wrapper">
+                        <h3><a href="#!">Arc Triomphe</a></h3>
+                        <p>Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.</p>
+                        <span class="price">From <strong>$54</strong> /per person</span>
+                    </div>
+                    <ul>
+                        <li><i class="fa fa-clock-o"></i> 1h 30min</li>
+                        <li><div class="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong></div></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="box_grid">
+                    <figure>
+                        <a href="#!" class="wish_bt"></a>
+                        <a href="#!"><img src="http://www.ansonika.com/panagea/img/tour_2.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
+                        <small>Churches</small>
+                    </figure>
+                    <div class="wrapper">
+                        <h3><a href="#!">Notredam</a></h3>
+                        <p>Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.</p>
+                        <span class="price">From <strong>$124</strong> /per person</span>
+                    </div>
+                    <ul>
+                        <li><i class="fa fa-clock-o"></i> 1h 30min</li>
+                        <li><div class="score"><span>Good<em>350 Reviews</em></span><strong>7.0</strong></div></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="box_grid">
+                    <figure>
+                        <a href="#!" class="wish_bt"></a>
+                        <a href="#!"><img src="http://www.ansonika.com/panagea/img/tour_1.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
+                        <small>Historic</small>
+                    </figure>
+                    <div class="wrapper">
+                        <h3><a href="#!">Versailles</a></h3>
+                        <p>Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.</p>
+                        <span class="price">From <strong>$25</strong> /per person</span>
+                    </div>
+                    <ul>
+                        <li><i class="fa fa-clock-o"></i> 1h 30min</li>
+                        <li><div class="score"><span>Good<em>350 Reviews</em></span><strong>7.0</strong></div></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="box_grid">
+                    <figure>
+                        <a href="#!" class="wish_bt"></a>
+                        <a href="#!"><img src="http://www.ansonika.com/panagea/img/tour_4.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
+                        <small>Historic</small>
+                    </figure>
+                    <div class="wrapper">
+                        <h3><a href="#!">Versailles</a></h3>
+                        <p>Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.</p>
+                        <span class="price">From <strong>$25</strong> /per person</span>
+                    </div>
+                    <ul>
+                        <li><i class="fa fa-clock-o"></i> 1h 30min</li>
+                        <li><div class="score"><span>Good<em>350 Reviews</em></span><strong>7.0</strong></div></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="box_grid">
+                    <figure>
+                        <a href="#!" class="wish_bt"></a>
+                        <a href="#!"><img src="http://www.ansonika.com/panagea/img/tour_3.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
+                        <small>Museum</small>
+                    </figure>
+                    <div class="wrapper">
+                        <h3><a href="#!">Pompidue Museum</a></h3>
+                        <p>Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.</p>
+                        <span class="price">From <strong>$45</strong> /per person</span>
+                    </div>
+                    <ul>
+                        <li><i class="fa fa-clock-o"></i> 2h 30min</li>
+                        <li><div class="score"><span>Superb<em>350 Reviews</em></span><strong>9.0</strong></div></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="box_grid">
+                    <figure>
+                        <a href="#!" class="wish_bt"></a>
+                        <a href="#!"><img src="http://www.ansonika.com/panagea/img/tour_1.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
+                        <small>Walking</small>
+                    </figure>
+                    <div class="wrapper">
+                        <h3><a href="#!">Tour Eiffel</a></h3>
+                        <p>Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.</p>
+                        <span class="price">From <strong>$65</strong> /per person</span>
+                    </div>
+                    <ul>
+                        <li><i class="fa fa-clock-o"></i> 1h 30min</li>
+                        <li><div class="score"><span>Good<em>350 Reviews</em></span><strong>7.5</strong></div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="backdrop" style="display: none;"></div>
+</body>
+</html>
